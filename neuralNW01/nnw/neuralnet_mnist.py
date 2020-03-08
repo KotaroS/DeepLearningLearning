@@ -54,8 +54,14 @@ img = x[index]
 label = t[index]
 
 y = predict(network, img)
-print(np.round(y*100))
+print("正解ラベル：")
+print(label)
+print("ニューラルネットワークの推論結果：")
+y2 = np.round(y*100)
+for j in range(len(y2)):
+  print(str(j) + "：" + str(y2[j]) + "%")
+
 
 img2 = x2[index].reshape(28, 28)
-print(label)
+
 img_show(img2)
