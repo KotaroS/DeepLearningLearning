@@ -7,11 +7,11 @@ from dataset.Train_data_load import load_liner
 from two_layer_net import TwoLayerNet
 
 # データの読み込み
-(x_train, t_train), (x_test, t_test) = load_liner(normalize=True, one_hot_label=False)
+(x_train, t_train), (x_test, t_test) = load_liner(normalize=False, one_hot_label=False)
 
 network = TwoLayerNet(input_size=10, hidden_size=30, output_size=10)
 
-iters_num = 100000  # 繰り返しの回数を適宜設定する
+iters_num = 60000  # 繰り返しの回数を適宜設定する
 train_size = x_train.shape[0]
 batch_size = 100
 learning_rate = 0.1
